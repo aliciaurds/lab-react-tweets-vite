@@ -1,6 +1,10 @@
 import "./App.css";
 import Tweet from "./components/Tweet";
-
+import ProfileImage from "./components/ProfileImage";
+import User from "./components/User";
+import Timestamp from "./components/Timestamp";
+import Message from "./components/Message";
+import Actions from "./components/Actions";
 const tweetsArray = [
   {
     user: {
@@ -40,7 +44,10 @@ const tweetsArray = [
 function App() {
   return (
     <div className="App">
-      <Tweet />
+      <Tweet tweet={tweetsArray[0]} />
+      <Tweet tweet={tweetsArray[1]} />
+      <Tweet tweet={tweetsArray[2]} />
+      {/* entiendo que aqui pasamos el obj tweet como prop del componente Tweet por eso en Tweet.jsx necesito acceder a el como tweet.user */}
     </div>
   );
 }
